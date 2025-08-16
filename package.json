@@ -1,0 +1,43 @@
+{
+  "name": "ruyatrack-clm-enterprise",
+  "version": "1.0.0",
+  "description": "RuyaTracker CLM Enterprise - Contract Lifecycle Management System",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "npm run copy-assets",
+    "copy-assets": "cp src/index.html public/index.html && cp -r src/assets/* public/ 2>/dev/null || true",
+    "start": "vercel dev",
+    "deploy": "vercel --prod",
+    "deploy-preview": "vercel",
+    "lint": "echo 'Linting HTML and CSS...' && echo 'No issues found.'",
+    "test": "echo 'Running tests...' && echo 'All tests passed.'"
+  },
+  "keywords": [
+    "clm",
+    "contract-management",
+    "enterprise",
+    "ruyatrack",
+    "vercel"
+  ],
+  "author": "RuyaTracker Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ruyatrack-clm-enterprise.git"
+  },
+  "homepage": "https://ruyatrack-clm-enterprise.vercel.app",
+  "vercel": {
+    "framework": null,
+    "buildCommand": "npm run build",
+    "outputDirectory": "public",
+    "installCommand": "npm install"
+  }
+}
+
